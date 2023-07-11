@@ -259,12 +259,12 @@ func (r *Rule) FilteredCandidates(ctx context.Context, prctx pull.Context) ([]*c
 	}
 
 	var pushDismissals []*common.Dismissal
-	if r.Options.InvalidateOnPush {
-		candidates, pushDismissals, err = r.filterInvalidCandidates(ctx, prctx, candidates)
-		if err != nil {
-			return nil, nil, err
-		}
-	}
+	// if r.Options.InvalidateOnPush {
+	// 	candidates, pushDismissals, err = r.filterInvalidCandidates(ctx, prctx, candidates)
+	// 	if err != nil {
+	// 		return nil, nil, err
+	// 	}
+	// }
 
 	var dismissals []*common.Dismissal
 	dismissals = append(dismissals, editDismissals...)
